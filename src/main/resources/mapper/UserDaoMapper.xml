@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duzq.boot2.dao.UserDao">
+    <resultMap id="User" type="com.duzq.boot2.entity.User">
+        <result column="USER_ID" property="userId"></result>
+        <result column="USER_NAME" property="userName"></result>
+    </resultMap>
+    <select id="getUserList" parameterType="com.duzq.boot2.entity.User" resultMap="User">
+        select * from tab_user
+    </select>
+    <select id="getUserListMap" resultType="hashmap">
+        select * from tab_user
+    </select>
+</mapper>
