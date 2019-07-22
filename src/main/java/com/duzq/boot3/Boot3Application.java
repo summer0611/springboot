@@ -1,13 +1,13 @@
-package com.duzq.boot1;
+package com.duzq.boot3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Boot1Application {
+public class Boot3Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Boot1Application.class, args);
+        SpringApplication.run(Boot3Application.class, args);
     }
 
 }
