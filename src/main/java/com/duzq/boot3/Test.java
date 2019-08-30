@@ -1,5 +1,6 @@
 package com.duzq.boot3;
 
+import com.duzq.boot3.config.DBConfig;
 import com.duzq.boot3.config.PersonConfig;
 import com.duzq.boot3.entity.Person;
 import org.springframework.context.ApplicationContext;
@@ -23,5 +24,11 @@ public class Test {
         Person person1 = aca.getBean(Person.class);
         person1.say();
 
+        // 注解方式读取配置文件
+        AnnotationConfigApplicationContext acaDb = new AnnotationConfigApplicationContext(DBConfig.class);
+        DBConfig dbConfig = acaDb.getBean(DBConfig.class);
+        System.out.println(dbConfig.getUserName());
+        System.out.println(dbConfig.getDriver());
+        System.out.println(dbConfig.getUrl());
     }
 }
